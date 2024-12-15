@@ -1,0 +1,210 @@
+body {
+    background-color: #f5f5dc; 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+
+header {
+    background-color: #8b4513; 
+    color: white;
+    padding: 40px 0;
+    animation: fadeInHeader 1s ease-in-out;
+}
+
+header h1 {
+    font-size: 3rem;
+}
+
+
+main {
+    background-color: #f5f5dc;
+}
+
+#dobrodosli {
+    background-color: #8b4513; 
+    color: white;
+    padding: 60px 0;
+    animation: slideInUp 1s ease-out;
+}
+
+#dobrodosli h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+#featured {
+    padding: 60px 0;
+    background-color: #f5f5dc; 
+    animation: fadeInUp 1s ease-in-out;
+}
+
+#featured h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05); 
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.card-text {
+    color: #666;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto; 
+    animation: fadeInFooter 1s ease-in-out;
+}
+
+footer p {
+    margin: 0;
+}
+
+form {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards 0.5s;
+}
+
+form .form-label {
+    font-weight: bold;
+}
+
+form .form-control {
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: #d2691e;
+    color: white;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    animation: buttonHover 1s infinite alternate;
+}
+
+form button:hover {
+    background-color: #c25b16; 
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+    animation: scaleIn 1s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .navbar-nav .nav-item .nav-link {
+        padding: 8px 15px;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    form .form-control {
+        font-size: 0.9rem;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInHeader {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFooter {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes buttonHover {
+    0% {
+        background-color: #d2691e;
+    }
+    50% {
+        background-color: #c25b16;
+    }
+    100% {
+        background-color: #d2691e;
+    }
+}
+
+@keyframes scaleIn {
+    0% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.card:hover {
+    animation: scaleIn 0.3s ease-out;
+}
